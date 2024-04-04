@@ -15,12 +15,12 @@ class Graph {
     }
 
     public Map<Integer, Integer> getNeighbors(int u) {
-        // Zwracamy sąsiadów wierzchołka u wraz z wagami
+    
         return graph.getOrDefault(u, new HashMap<>());
     }
 
     public Integer getWeight(int u, int v) {
-        // Zwracamy wagę krawędzi między wierzchołkami u i v
+     
         if (graph.containsKey(u) && graph.get(u).containsKey(v)) {
             return graph.get(u).get(v);
         }
@@ -34,11 +34,11 @@ class Graph {
         g.addEdge(3, 4, 998);
         g.addEdge(1, 4, 786);
 
-        // Sprawdzamy sąsiadów wierzchołka 1 wraz z wagami
+        // Sprawdzamy sąsiadów wierzchołka 1 wraz z jego wagami
         System.out.println("punkty sąsiadujące z punktem 1");
         System.out.println(g.getNeighbors(1));
 
-        // Sprawdzamy wagę krawędzi między wierzchołkami 1 i 4
+        // Sprawdzamy wagę krawędzi między wierzchołkami 2 i 3
         System.out.println("Waga krawędzi między wierzchołkami 2 i 3:");
         System.out.println(g.getWeight(2, 3));
     }
